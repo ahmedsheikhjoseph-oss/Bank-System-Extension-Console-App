@@ -2,6 +2,14 @@
 #pragma warning(disable : 4267)  // Disable Error of enum Class 
 #pragma warning(disable : 4996)  // Disable Error of enum Class 
 
+/*
+Project: Bank Management System Extension (V2) .. Transactions Menu (Deposit, Withdraw, Total Balances)
+Course: Algorithms & Problem Solving Level 3
+Concept: Advanced File Handling, Data Persistence, and CRUD Operations.
+Developed By: [ِAhmed Sheikh Al-deen]
+*/
+
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -166,6 +174,7 @@ void PrintClientRecordLine(sClient Client)
 	cout << "| " << setw(12) << left << Client.AccountBalance;
 }
 
+// UI/UX: Displays all clients in a well-formatted table using iomanip
 void ShowAllClientsScreen()
 {
 	vector <sClient> vClients = LoadCleintsDataFromFile(ClientsFileName);
@@ -671,6 +680,8 @@ string GetCurrentTimestamp() {
 	strftime(buf, sizeof(buf), "%Y-%m-%d | %X", &tstruct);
 	return buf;
 }
+
+// UI/UX: Displays all clients in a well-formatted table using iomanip
 void ShowTransactionsMenue()
 {
 	system("cls");
@@ -747,6 +758,8 @@ void PerfromMainMenueOption(enMainMenueOptions MainMenueOption)
 		break;
 	}
 }
+
+// UI/UX: Displays all clients in a well-formatted table using iomanip
 void ShowMainMenue()
 {
 	system("cls");
