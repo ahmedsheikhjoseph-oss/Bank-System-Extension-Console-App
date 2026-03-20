@@ -10,6 +10,7 @@ Developed By: [ِAhmed Sheikh Al-deen]
 */
 
 
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -174,7 +175,6 @@ void PrintClientRecordLine(sClient Client)
 	cout << "| " << setw(12) << left << Client.AccountBalance;
 }
 
-// UI/UX: Displays all clients in a well-formatted table using iomanip
 void ShowAllClientsScreen()
 {
 	vector <sClient> vClients = LoadCleintsDataFromFile(ClientsFileName);
@@ -216,7 +216,7 @@ void ShowTotalBalances()
 {
 	vector <sClient> vClients = LoadCleintsDataFromFile(ClientsFileName);
 
-	cout << "\033[38;5;208m" << "\n\t\t\t\t\t Balances List (" << vClients.size() << ") Client(s)." << "\033[0m";
+	cout << "\033[1;38;5;51;48;5m" << "\n\t\t\t\t\t Balances List (" << vClients.size() << ") Client(s)." << "\033[0m";
 	cout << "\n___________________________________________";
 	cout << "________________________________________________________\n" << endl;
 	cout << "| " << left << setw(15) << "Accout Number";
@@ -242,7 +242,7 @@ void ShowTotalBalances()
 	cout << "\n_______________________________________________________";
 	cout << "_________________________________________\n" << endl;
 
-	cout << "\033[38;2;152;251;152m" << "\t\t\t\t\tTotal Balance = " << TotalBalance << "\033[0m";
+	cout << "\033[1;38;5;51;48;5m" << "\t\t\t\t\tTotal Balance = " << TotalBalance << "\033[0m";
 
 	cout << "\n_______________________________________________________";
 	cout << "_________________________________________\n" << endl;
@@ -542,7 +542,7 @@ void ShowEndScreen()
 void ShowDepositScreen()
 {
 	cout << "\n-----------------------------------\n";
-	cout << "\033[38;5;208m" << "\tDeposit Screen" << "\033[0m";
+	cout << "\033[1;38;5;51;48;5m" << "\tDeposit Screen" << "\033[0m";
 	cout << "\n-----------------------------------\n";
 
 	sClient Client;
@@ -570,7 +570,7 @@ void ShowDepositScreen()
 void ShowWithDrawScreen()
 {
 	cout << "\n-----------------------------------\n";
-	cout << "\033[38;5;208m" << "\tWithdraw Screen" << "\033[0m";
+	cout << "\033[1;38;5;51;48;5m" << "\tWithdraw Screen" << "\033[0m";
 	cout << "\n-----------------------------------\n";
 
 	sClient Client;
@@ -680,8 +680,6 @@ string GetCurrentTimestamp() {
 	strftime(buf, sizeof(buf), "%Y-%m-%d | %X", &tstruct);
 	return buf;
 }
-
-// UI/UX: Displays all clients in a well-formatted table using iomanip
 void ShowTransactionsMenue()
 {
 	system("cls");
@@ -758,8 +756,6 @@ void PerfromMainMenueOption(enMainMenueOptions MainMenueOption)
 		break;
 	}
 }
-
-// UI/UX: Displays all clients in a well-formatted table using iomanip
 void ShowMainMenue()
 {
 	system("cls");
@@ -772,7 +768,7 @@ void ShowMainMenue()
 	cout << "\033[1;38;5;226;48;5;244m" << "       [3] Delete Client.                  \n";
 	cout << "\033[1;38;5;226;48;5;244m" << "       [4] Update Client Info.             \n";
 	cout << "\033[1;38;5;226;48;5;244m" << "       [5] Find Client.                    \n";
-	cout << "\033[1;38;5;226;48;5;244m" << "       [6] Transactions.                   \n";
+	cout << "\033[1;38;5;51;48;5;244m" << "       [6] Transactions.                   \n";
 	cout << "\033[1;38;5;226;48;5;244m" << "       [7] Exit.                           \n";
 	cout << "\033[1;38;5;226;48;5;244m" << "===========================================" << "\033[0m\n\n" << endl;
 
